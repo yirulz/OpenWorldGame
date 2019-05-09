@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6738915687540035577}
   - component: {fileID: 9098381109201901525}
   - component: {fileID: 174532853}
-  - component: {fileID: 6554100590327128691}
+  - component: {fileID: 1260100999825710570}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -123,15 +123,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6738915687540035576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af57dfa6c1dbdd14785b1310c62bbf65, type: 3}
+  m_Script: {fileID: 11500000, guid: 46f260939e2f08541b65fc261cc33316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedCamera: {fileID: 6738915688885411562}
-  isCursorHidden: 1
-  minPitch: -80
-  maxPitch: 80
-  speed: {x: 120, y: 120}
---- !u!114 &6554100590327128691
+  runSpeed: 8
+  walkSpeed: 6
+  gravity: -10
+  jumpHeight: 15
+  dashSpeed: 50
+  dashDuration: 0.5
+--- !u!114 &1260100999825710570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,9 +141,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6738915687540035576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e30063aa1424eb48a33cd60b6230c54, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ebeed0360b4bfd42b016d787dd655c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachedCamera: {fileID: 6738915688885411562}
+  isCursorHidden: 1
+  minPitch: -80
+  maxPitch: 80
+  speed: {x: 120, y: 120}
 --- !u!1 &6738915688885411561
 GameObject:
   m_ObjectHideFlags: 0
