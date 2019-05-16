@@ -5,8 +5,10 @@ using UnityEngine;
 using System.Linq;
 
 [RequireComponent(typeof(Player))]
-public class Shooting : MonoBehaviour
+public class Combat : MonoBehaviour, IHealth
 {
+    public int health = 100;
+
     public Weapon currentWeapon;
     public List<Weapon> weapons = new List<Weapon>();
     public int currentWeaponIndex = 0;
@@ -40,17 +42,9 @@ public class Shooting : MonoBehaviour
                 //Check if weapon can shoot
                 if(currentWeapon.canShoot)
                 {
-                    //Shoot the weapon
-                    currentWeapon.Shoot();
-                    //Apply weapon recoil
-                    Vector3 euler = Vector3.up * 2f;
-                    //Randomise the pitch
-                    euler.x = Random.Range(-1f, 1f);
-                    //Apply offset ot camera using weapon recoil
-                    cameraLook.SetTargetOffset(euler * currentWeapon.recoil);
+                    currentWeapon.Attack();
 
                 }
-
 
             }
         }
@@ -78,5 +72,20 @@ public class Shooting : MonoBehaviour
             //Update current weapon index
             currentWeaponIndex = index;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            print("Dead");
+        }
+
+    }
+
+    public void Heal(int heal)
+    {
+        health += heal;
     }
 }

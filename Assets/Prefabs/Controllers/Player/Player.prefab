@@ -244,6 +244,7 @@ MonoBehaviour:
   minPitch: -80
   maxPitch: 80
   speed: {x: 120, y: 120}
+  resolveSpeed: 10
 --- !u!1 &6738915688885411561
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AK47
       objectReference: {fileID: 0}
+    - target: {fileID: 1461629807306522, guid: 5253f57425dc12444b9f96f505641edb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4961695010069904, guid: 5253f57425dc12444b9f96f505641edb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.12900034
@@ -504,7 +509,7 @@ PrefabInstance:
     - target: {fileID: 5310796648399610715, guid: d31f595f4925e804190a16e59f035062,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4516233773227008393, guid: d31f595f4925e804190a16e59f035062,
         type: 3}
@@ -560,6 +565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352913979248932969, guid: d31f595f4925e804190a16e59f035062,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.019
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d31f595f4925e804190a16e59f035062, type: 3}

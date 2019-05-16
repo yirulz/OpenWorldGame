@@ -240,6 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4961695010069904}
+  - component: {fileID: 1911492216317652782}
   m_Layer: 9
   m_Name: AK47
   m_TagString: Untagged
@@ -267,6 +268,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911492216317652782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461629807306522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17387c09590bdaf438fe5c7f826d5c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 10
+  attackRate: 0.2
+  canShoot: 0
+  maxReserve: 500
+  maxClip: 20
+  spread: 2
+  recoil: 1
+  shotOrigin: {fileID: 4052678974923746}
+  ProjectilePrefab: {fileID: 1011168158077300154, guid: 62d42e75ea3806e44b5aef1da82c1678,
+    type: 3}
 --- !u!1 &1546446475565526
 GameObject:
   m_ObjectHideFlags: 0
