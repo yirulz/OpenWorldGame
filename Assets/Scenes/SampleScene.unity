@@ -6160,7 +6160,7 @@ PrefabInstance:
     - target: {fileID: 7679972104691022355, guid: 539ea7a37a546674996ee64657651493,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.3
+      value: -29.4
       objectReference: {fileID: 0}
     - target: {fileID: 7679972104691022355, guid: 539ea7a37a546674996ee64657651493,
         type: 3}
@@ -6226,18 +6226,18 @@ PrefabInstance:
         type: 3}
       propertyPath: behaviours.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b860d8af67010e742b5ff1471f1ddc70,
+      objectReference: {fileID: 11400000, guid: a9ec17523024266409958a9876227ba0,
         type: 2}
     - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
         type: 3}
       propertyPath: maxVelocity
-      value: 100
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
         type: 3}
       propertyPath: behaviours.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 638e85e5e7a9fb84d828a40cefde1002,
+      objectReference: {fileID: 11400000, guid: b860d8af67010e742b5ff1471f1ddc70,
         type: 2}
     - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
         type: 3}
@@ -6249,6 +6249,17 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 924625127}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: maxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: behaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b8d105c41ffcdb48a84156491432ca6,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539ea7a37a546674996ee64657651493, type: 3}
 --- !u!1001 &6738915687374694152

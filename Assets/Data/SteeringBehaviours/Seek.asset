@@ -15,4 +15,4 @@ MonoBehaviour:
   weighting: 1
   target: {fileID: 0}
   targetTag: Player
-  stoppingDistance: 1
+  stoppingDistance: 5

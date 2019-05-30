@@ -12,9 +12,9 @@ public class AI : MonoBehaviour
     public float maxDistance = 10f;
     
     public SteeringBehaviour[] behaviours;
-    protected NavMeshAgent agent;
+    public NavMeshAgent agent;
 
-    private Vector3 velocity;
+    protected Vector3 velocity;
 
     private void Awake()
     {
