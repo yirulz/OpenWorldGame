@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -6217,6 +6217,38 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 924625127}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: behaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: behaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b860d8af67010e742b5ff1471f1ddc70,
+        type: 2}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: maxVelocity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: behaviours.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 638e85e5e7a9fb84d828a40cefde1002,
+        type: 2}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: hasTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585794642830648421, guid: 539ea7a37a546674996ee64657651493,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 924625127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539ea7a37a546674996ee64657651493, type: 3}
 --- !u!1001 &6738915687374694152
@@ -6256,16 +6288,6 @@ PrefabInstance:
     - target: {fileID: 219858992, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee, type: 3}
       propertyPath: m_Layer
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862753434943498314, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862753434943498314, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6738915687540035580, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee,
         type: 3}
@@ -6346,6 +6368,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862753434943498314, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862753434943498314, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1750641028473455917, guid: 0fbd9b77af4b57e4eb0bb6acc2c1aeee,
         type: 3}

@@ -54,7 +54,7 @@ namespace Projectiles
             // Get angle between normal and bullet dir
             float impactAngle = 180 - Vector3.Angle(bulletDir, contact.normal);
             clone.transform.localScale = clone.transform.localScale / (1 + impactAngle / 45);
-
+            Destroy(clone, 5f);
             Effect effect = clone.GetComponent<Effect>();
             effect.damage += damage;
             effect.hitObject = col.transform;
