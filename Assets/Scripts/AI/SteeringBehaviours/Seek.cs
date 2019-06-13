@@ -20,7 +20,7 @@ public class Seek : SteeringBehaviour
         //Get distance between owner and target
         float distance = Vector3.Distance(owner.transform.position, owner.target.position);
         //If Ai is further away
-        if(distance > stoppingDistance)
+        if (distance > stoppingDistance)
         {
             //modify value here...
             if (owner.hasTarget)
@@ -29,7 +29,7 @@ public class Seek : SteeringBehaviour
                 force += owner.target.position - owner.transform.position;
             }
         }
-       
+
         //return normalized value
         return force.normalized;
     }

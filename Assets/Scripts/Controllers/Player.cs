@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public float walkSpeed = 6f;
     public float gravity = -10f;
     public float jumpHeight = 15f;
+    public int damage = 20;
+
+    public float health = 100;
 
     [Header("Dash")]
     public float dashSpeed = 50f;
@@ -121,6 +124,17 @@ public class Player : MonoBehaviour
     public void Dash()
     {
         StartCoroutine(SpeedBoost(dashSpeed, walkSpeed, dashDuration));
+    }
+
+ 
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Enemy enemy = other.GetComponent<Enemy>();
+        if(enemy)
+        {
+            enemy.TakeDamage(damage);
+        }
     }
 
 }
