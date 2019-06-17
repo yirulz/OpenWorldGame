@@ -27,6 +27,28 @@ namespace Tests
 
             LogAssert.Expect(LogType.Log, "Player Found");
         }
+        [Test]
+        public void Player_Health()
+        {
+            var health = GameObject.FindObjectOfType<Player>().health;
+            Assert.AreEqual(100, health);
+        }
+
+        public void Setup()
+        {
+
+        }
+        [Test]
+        public void Player_Run()
+        {
+
+        }
+
+        [Test]
+        public void Player_isGrounded()
+        {
+           
+        }
 
         public void FindCollider()
         {
@@ -47,8 +69,6 @@ namespace Tests
             yield return null;
             //If players health is not same as oldHealth
             Assert.IsTrue(player.health != oldHealth);
-            
-
         }
     }
 }
