@@ -18,7 +18,7 @@ namespace Tests
         }
 
         [Test]
-        public void Find_Player()
+        public void _Find_Player()
         {
             var player = GameObject.FindObjectOfType<Player>();
             Assert.IsTrue(player != null);
@@ -28,35 +28,49 @@ namespace Tests
             LogAssert.Expect(LogType.Log, "Player Found");
         }
         [Test]
-        public void Player_Health()
+        public void _Player_Health_At_100()
         {
             var health = GameObject.FindObjectOfType<Player>().health;
             Assert.AreEqual(100, health);
         }
         [Test]
-        public void Enemy_In_Scene()
+        public void _Enemy_In_Scene()
         {
             var enemy = GameObject.FindGameObjectsWithTag("Enemy");
 
-            Assert.IsTrue(enemy != null);
+            Assert.IsFalse(enemy == null);
         }
 
 
         [UnityTest]
-        public IEnumerator Player_isGrounded()
+        public IEnumerator _Player_isGrounded()
         {
             var player = GameObject.FindObjectOfType<Player>();
 
-            var isGrounded = Physics.Raycast(player.transform.position, Vector3.down, 100);
+            var isGrounded = Physics.Raycast(player.transform.position, Vector3.down, 1);
             yield return null;
 
             Assert.IsTrue(isGrounded);
         }
 
-        public void FindCollider()
+        [UnityTest]
+        public IEnumerator _Bullets_Spawn_From_Resources()
         {
-            var player = GameObject.FindObjectOfType<Player>();
+            var bulletPrefab = Resources.Load("bullet");
+
+            yield return null;
+            Assert.IsTrue(bulletPrefab);
+
         }
+
+        //public IEnumerator _Can_Shoot()
+        //{
+        //    var bulletPrefab = Resources.Load("bullet");
+        //    var bullet = new GameObject().AddComponent<Projectile>();
+        //    yield return null;
+
+        //    Assert.AreEqual(bulletPrefab, bullet);
+        //}
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
