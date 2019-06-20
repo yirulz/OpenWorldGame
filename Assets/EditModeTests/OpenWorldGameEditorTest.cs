@@ -33,21 +33,24 @@ namespace Tests
             var health = GameObject.FindObjectOfType<Player>().health;
             Assert.AreEqual(100, health);
         }
-
-        public void Setup()
-        {
-
-        }
         [Test]
-        public void Player_Run()
+        public void Enemy_In_Scene()
         {
+            var enemy = GameObject.FindGameObjectsWithTag("Enemy");
 
+            Assert.IsTrue(enemy != null);
         }
 
-        [Test]
-        public void Player_isGrounded()
+
+        [UnityTest]
+        public IEnumerator Player_isGrounded()
         {
-           
+            var player = GameObject.FindObjectOfType<Player>();
+
+            var isGrounded = Physics.Raycast(player.transform.position, Vector3.down, 100);
+            yield return null;
+
+            Assert.IsTrue(isGrounded);
         }
 
         public void FindCollider()
@@ -57,18 +60,18 @@ namespace Tests
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator Check_Player_Damaged()
-        {
-            //Detecting if player exists
-            var player = GameObject.FindObjectOfType<Player>();
-            //Set oldHealth to players health
-            var oldHealth = player.health;
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
-            //If players health is not same as oldHealth
-            Assert.IsTrue(player.health != oldHealth);
-        }
+        //[UnityTest]
+        //public IEnumerator Check_Player_Damaged()
+        //{
+        //    //Detecting if player exists
+        //    var player = GameObject.FindObjectOfType<Player>();
+        //    //Set oldHealth to players health
+        //    var oldHealth = player.health;
+        //    // Use the Assert class to test conditions.
+        //    // Use yield to skip a frame.
+        //    yield return null;
+        //    //If players health is not same as oldHealth
+        //    Assert.IsTrue(player.health != oldHealth);
+        //}
     }
 }
